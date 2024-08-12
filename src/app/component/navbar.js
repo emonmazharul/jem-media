@@ -21,10 +21,10 @@ export function Navbar(){
                         className=" ease-in-out transition-all hover:scale-105"
                     />
                 </Link>
-                <Link href="#service" className="hidden md:inline md:pt-3">Service</Link>
-                <Link href="#whychooseuse" className="hidden md:inline md:pt-3">Why Choose Us</Link>
+                <Link href="#service" className="hidden md:inline md:pt-3">Services</Link>
+                <Link href="#whychooseus" className="hidden md:inline md:pt-3">Why Choose Us</Link>
                 <Link href="/faq" className="hidden md:inline md:pt-3">FAQ</Link>
-                <Link href="#" className="hidden md:inline bg-colorTwo md:px-8 rounded-full md:pb-3 md:pt-3">Unlock</Link>
+                <Link href="#contact" className="hidden md:inline bg-colorTwo md:px-8 rounded-full md:pb-3 md:pt-3">Unlock</Link>
                 <Link 
                     href="#" 
                     onClick={(e) => {
@@ -43,12 +43,12 @@ export function Navbar(){
                     
                 </Link>
             </div>
-            <div ref={mobile_menu_ref} className="hidden md:hidden bg-colorOne mt-3 absolute w-full left-0 mobile_nav_menu">
-                <Link className="block text-white border-t-2 border-b-2 text-[17px] px-4 py-4" href="/service">service</Link>
-                <Link className="block text-white border-b-2 text-[17px] px-4 py-4" href="/contact">contact</Link>
-                <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="/whychooseus">why choose us</Link>
+            <div ref={mobile_menu_ref} className="hidden md:hidden bg-colorOne mt-3 absolute z-20 w-full left-0 mobile_nav_menu">
+                <Link className="block text-white border-t-2 border-b-2 text-[17px] px-4 py-4" href="#services">Services</Link>
+                <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="#whychooseus">why choose us</Link>
                 <Link className="block text-white border-b-2 text-[17px] px-4 py-4" href="/faq">FAQ</Link>
-
+                <Link href="#contact" className="bg-colorTwo text-colorOne text-[17px] font-bold inline-block mx-4 my-2 px-4 py-2 rounded-full md:pb-3 md:pt-3">Unlock</Link>
+                
             </div>
         </nav>
     </>

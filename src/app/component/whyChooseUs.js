@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function WhyChooseUs() {
     return <>
-        <section id="whychooseuse" className="md:py-20">
+        <section id="whychooseus" className="md:py-20">
             <h1 className="text-3xl md:text-5xl mb-10 md:mb-12 font-extrabold text-center">
                 Why choose us
             </h1>
