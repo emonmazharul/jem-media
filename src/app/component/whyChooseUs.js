@@ -3,7 +3,7 @@ export default function WhyChooseUs() {
     return <>
         <section id="whychooseus" className="md:py-20">
             <h1 className="text-3xl md:text-5xl mb-10 md:mb-12 font-extrabold text-center">
-                Why choose us
+                Why Choose Us
             </h1>
             <div className="contanier  md:mx-auto md:w-[1200px]">
                 <div className="flex flex-col md:flex-row gap-y-14 md:gap-y-0 md:gap-10 md:justify-center text-center px-3 md:px-0">
@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
                             width={139}
                             height={139}
                         />
-                        <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-3 md:mb-4">Tailord</h1>
+                        <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-3 md:mb-4">Tailored</h1>
                         <p className="text-sm md:text-2xl">
                         Personalised marketing strategies tailored to your business needs to ensure optimal results and growth.
                         </p>
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
                         />
                         <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-3 md:mb-4">Local</h1>
                         <p className="text-sm md:text-2xl ">
-                            {"We’re all about helping local businesses.??We won’t leave you hanging with long distance communication."}
+                            {"We’re all about helping local businesses. We won’t leave you hanging with long distance communication."}
                         </p>
                     </div>
                     {/* div three */}
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
                         />
                         <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-3 md:mb-4">Result</h1>
                         <p className="text-sm md:text-2xl">
-                            {"We focus on delivering results.??Your growth is our success."}    
+                            {"We focus on delivering results. Your growth is our success."}    
                         </p>
                     </div>
                 </div>

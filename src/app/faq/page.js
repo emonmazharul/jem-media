@@ -29,7 +29,7 @@ const faqs = [
     {
       title: "How long does it take to see results?",
       text:"A fresh website can instantly boost your presence online! Our management team ensures your website is always up to date and looking fresh. In addition, our services will increase your visibility online, creating a portfolio for future potential customers to look at. This means you can expect to see some result almost instantly, although we prioritise building long term relationships with you, as we care about your long term growth, not just your short term success!",
-      active: true,
+      active: false,
     },
     {
       title: "What sets your agency apart? I've had negative experiences previously.",
@@ -43,9 +43,17 @@ const faqs = [
     },
     {
       title: "How involved will I need to be in the process?",
-      text: "If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.",
+      text:`As little as you wish! We understand your passion lies in your business, and it’s our job to ensure you focus on your passion, while we focus on delivering exceptional growth to your online presence and sales.
+
+        We value your input too! Some business owners enjoy giving suggestions for fresh content ideas, or updates for their website. Our team are always working to make sure your needs are met, whether that involves minimal involvement or a full hands-on approach.`,
+      // text: "If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.",
       active: false,
     },
+    {
+      title:"How much does it typically cost to work with a marketing agency in the UK?",
+      text:"",
+      active:false,
+    }
   ]
 
 export default function Profilepage() {

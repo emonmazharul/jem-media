@@ -1,6 +1,6 @@
 export function Services(){
     return <>
-        <section id="service" className="service_section mb-10 md:mb-0  md:py-20">
+        <section id="services" className="service_section mb-10 md:mb-0  md:py-20">
             <h1 className="text-3xl md:text-5xl mb-10 md:mb-20 text-black font-extrabold text-center">
                 Services
             </h1>
@@ -18,7 +18,7 @@ export function Services(){
                     </div>
                     {/* service two */}
                     <div className="service_card md:px-4 md:py-4 md:w-[35%]">
-                        <h1 className="font-bold text-xl mb-3 md:mb-4" >Social Media Management</h1>
+                        <h1 className="font-bold text-2xl mb-3 md:mb-4" >Social Media Management</h1>
                         <p className="px-4 text-[16px] leading-6 font-light">
                         Schedule posts and direct traffic to your business 
                         with the creation and management of your social 

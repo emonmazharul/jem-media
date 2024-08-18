@@ -65,8 +65,8 @@ export default function Footer() {
             </div>       
         </div>
         {/* website copyright  */}
-        <div className="bg-[#5465BD] py-3 mt-6 md:mt-10" >
-            <h6 className="text-center text-[black]">&#169; {new Date().getFullYear()} JEM Digital Ltd</h6>
+        <div className="footer_copyright py-3 mt-6 md:mt-10" >
+            <h6 className="text-center">&#169; {new Date().getFullYear()} JEM Digital Ltd</h6>
         </div>
     </footer>
 }

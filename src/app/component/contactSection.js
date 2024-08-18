@@ -5,7 +5,7 @@ export function ContactSection() {
             <div className="container md:w-[1200px] md:mx-auto ">
                 <div className="flex flex-col md:flex-row justify-center md:justify-between">
                     <div className="md:w-[50%]">
-                        <div className="text-colorOne text-2xl  md:text-5xl text-center md:text-left font-bold mb-10 md:mb-16">
+                        <div className="text-2xl  md:text-5xl text-center md:text-left font-bold mb-10 md:mb-16">
                             <h1 className="md:mb-6">Let’s discuss </h1>
                             <h1>
                                 your business’ <span className="text-[#40E0D0]">needs</span>
@@ -33,10 +33,10 @@ export function ContactSection() {
                         </ul> */}
                     </div>
                     <div className="bg-colorOne mx-5 py-5 md:mx-0 md:w-[40%] md:p-5 rounded-[24px]">
-                        <h6 className="text-white md:text-[20px] font-medium mb-2 md:mb-4 pl-4 md:pl-0">I am interesting in</h6>
+                        <h6 className="text-white md:text-[20px] font-medium mb-2 md:mb-4 pl-4 md:pl-0">I’m interested in...</h6>
                         <div className="mb-6 md:mb-10 pl-4 md:pl-0">
                             {
-                                ['Website', 'Branding', 'Social Media', 'Advertising', 'Content', 'Other Please Specify'].map(item => {
+                                ['Website', 'Branding', 'Social Media', 'Advertising', 'Content', 'Other (Please Specify)'].map(item => {
                                     return <button className="py-2 px-4 mb-4 mr-4 md:mr-4 md:mb-4 md:px-4 md:py-2 border border-colorTwo text-white rounded-[8px] hover:bg-colorTwo" key={item}>{item}</button>
                                 })
                             }
