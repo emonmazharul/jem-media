@@ -1,11 +1,10 @@
 
 export const metadata = {
-    title:'FAQ'
+    title:'Customer form'
 }
 
 export default function ProfileLayout({children}) {
     return <div>
         {children}
-        
     </div>
 }

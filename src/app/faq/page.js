@@ -1,14 +1,4 @@
-// 'use client'
-// import {
-//     Accordion,
-//     AccordionItem,
-//     AccordionItemHeading,
-//     AccordionItemButton,
-//     AccordionItemPanel,
-// } from 'react-accessible-accordion';
-// import 'react-accessible-accordion/dist/fancy-example.css';
 import  Accordion from '@/app/component/accordion'
-import { text } from '@fortawesome/fontawesome-svg-core'
 
 const faqs = [
     {
@@ -95,79 +85,5 @@ export default function Profilepage() {
             }
         </div>
     </section>
-    // return <section id="faq">
-    //     <h1 className='text-center text-colorOne font-bold text-5xl md:my-7' > 
-    //         FAQ- Your Question Answered
-    //     </h1>
-    //     <div className='md:mx-auto md:w-[800px] text-center'>
-    //         <Accordion>
-    //             <AccordionItem className='bg-red-300'>
-    //                 <AccordionItemHeading className='bg-red-300'>
-    //                     <AccordionItemButton className='accordion__button bg-black text-white'>
-    //                         What harsh truths do you prefer to ignore?
-    //                     </AccordionItemButton>
-    //                 </AccordionItemHeading>
-    //                 <AccordionItemPanel>
-    //                     <p>
-    //                         Exercitation in fugiat est ut ad ea cupidatat ut in
-    //                         cupidatat occaecat ut occaecat consequat est minim minim
-    //                         esse tempor laborum consequat esse adipisicing eu
-    //                         reprehenderit enim.
-    //                     </p>
-    //                 </AccordionItemPanel>
-    //             </AccordionItem>
-    //             <AccordionItem>
-    //                 <AccordionItemHeading>
-    //                     <AccordionItemButton>
-    //                         Is free will real or just an illusion?
-    //                     </AccordionItemButton>
-    //                 </AccordionItemHeading>
-    //                 <AccordionItemPanel>
-    //                     <p>
-    //                         In ad velit in ex nostrud dolore cupidatat consectetur
-    //                         ea in ut nostrud velit in irure cillum tempor laboris
-    //                         sed adipisicing eu esse duis nulla non.
-    //                     </p>
-    //                 </AccordionItemPanel>
-    //             </AccordionItem>
-    //         </Accordion>
-    //     </div>
-    // </section>
-
-    // return  <div class='accordion-group' data-accordion="default-accordion">
-    //     <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
-    //         <button class='accordion-toggle group accordion-active:text-indigo-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 active:text-indigo-600' aria-controls='basic-collapse-one-default'>
-    //         <h5> How to create an account? </h5>
-    //         <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    //         <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-    //         </svg>
-    //         </button>
-    //         <div id='basic-collapse-one-default' class='accordion-content w-full px-0 overflow-hidden pr-4 ' aria-labelledby='basic-heading-one-default'>
-    //         <p class='text-base text-gray-600 leading-6'>To create an account, find the 'Sign up' or 'Create account' button, fill out the registration form with your personal information, and click 'Create account' or 'Sign up.' Verify your email address if needed, and then log in to start using the platform.</p>
-    //         </div>
-    //     </div>
-    //     <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-two-default'>
-    //     <button class='accordion-toggle group  inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600' aria-controls='basic-collapse-two-default'>
-    //     <h5> Have any trust issue? </h5>
-    //     <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600  accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    //     <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-    //     </svg>
-    //     </button>
-    //     <div id='basic-collapse-two-default' class='accordion-content  w-full px-0 overflow-hidden  pr-4 ' aria-labelledby='basic-heading-two-default'>
-    //     <p class='text-sm text-gray-500 leading-6'>Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.</p>
-    //     </div>
-    //     </div>
-    //     <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-    //     <button class='accordion-toggle group  inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-indigo-600 accordion-active:text-indigo-600' aria-controls='basic-collapse-three-default'>
-    //     <h5> How can I reset my password? </h5>
-    //     <svg class='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600  accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    //     <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-    //     </svg>
-    //     </button>
-    //     <div id='basic-collapse-three-default' class='accordion-content  w-full px-0 overflow-hidden  pr-4 ' aria-labelledby='basic-heading-three-default'>
-    //     <p class='text-sm text-gray-500 leading-6'>Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.</p>
-    //     </div>
-    //     </div>
-    // </div>
     
 }

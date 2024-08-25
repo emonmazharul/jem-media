@@ -29,7 +29,12 @@ export function Navbar(){
                     href="#" 
                     onClick={(e) => {
                             e.preventDefault();
-                            mobile_menu_ref.current.classList.toggle('hidden')
+                            if(mobile_menu_ref.current.classList.contains('h-[180.50px]')) {
+                                console.log('the condition matched');
+                                mobile_menu_ref.current.classList.remove('h-[180.50px]');
+                                return;
+                            }
+                            mobile_menu_ref.current.classList.add('h-[180.50px]')
                         }
                     }
                     className="md:hidden"
@@ -43,12 +48,11 @@ export function Navbar(){
                     
                 </Link>
             </div>
-            <div ref={mobile_menu_ref} className="hidden md:hidden bg-colorOne mt-3 absolute z-20 w-full left-0 mobile_nav_menu">
+            <div ref={mobile_menu_ref} className="md:hidden bg-colorOne mt-3 absolute z-20 w-full left-0 mobile_nav_menu h-0 overflow-hidden transition-[height] delay-100 ease-linear">
                 <Link className="block text-white border-t-2 border-b-2 text-[17px] px-4 py-4" href="#services">Services</Link>
                 <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="#whychooseus">why choose us</Link>
                 <Link className="block text-white border-b-2 text-[17px] px-4 py-4" href="/faq">FAQ</Link>
-                <Link href="#contact" className="bg-colorTwo text-colorOne text-[17px] font-bold inline-block mx-4 my-2 px-4 py-2 rounded-full md:pb-3 md:pt-3">Unlock</Link>
-                
+                {/* <Link href="#contact" className="bg-colorTwo text-colorOne text-[17px] font-bold inline-block mx-4 my-2 px-4 py-2 rounded-full md:pb-3 md:pt-3">Unlock</Link> */}
             </div>
         </nav>
     </>

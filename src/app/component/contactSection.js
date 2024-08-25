@@ -43,11 +43,11 @@ export function ContactSection() {
                         </div>
                         <div>
                             <form className="flex flex-wrap gap-x-4 gap-y-8 px-4 md:px-0 md:justify-between">
-                                <input type="text" placeholder="Name" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%]" />
-                                <input type="text" placeholder="Business name" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%]" />
-                                <input type="email" placeholder="Email" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%]" />
-                                <input type="phone" placeholder="Phone Number" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%]" />
-                                <input type="text" placeholder="Leave a message" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[100%]" />
+                                <input type="text" placeholder="Name" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%] focus:bg-colorOne focus:border-colorOne" />
+                                <input type="text" placeholder="Business name" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%] focus:border-none" />
+                                <input type="email" placeholder="Email" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%] focus:border-none" />
+                                <input type="phone" placeholder="Phone Number" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[45%] focus:border-none" />
+                                <input type="text" placeholder="Leave a message" className="block font-medium text-white border-b-2 bg-colorOne border-b-colorTwo w-[100%] focus:border-none" />
                                 <div className="mt-10 w-full">
                                     <button className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px]">Send message</button>
                                 </div>
