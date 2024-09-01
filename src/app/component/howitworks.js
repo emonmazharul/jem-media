@@ -13,12 +13,14 @@ export function Card({heading,text}) {
 export function MyImage({src}){
     return <>
         <Image
+            alt="View our work plan and get start quickly"
             className="hidden md:block order-2 md:order-1"
             src={src}
             width={317}
             height={317}
         />
         <Image
+            alt="View our work plan and get start quickly"
             className="md:hidden order-2 object-contain md:order-1"
             src={src}
             width={140}

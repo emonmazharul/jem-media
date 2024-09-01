@@ -9,7 +9,8 @@ export default function WhyChooseUs() {
                 <div className="flex flex-col md:flex-row gap-y-14 md:gap-y-0 md:gap-10 md:justify-center text-center px-3 md:px-0">
                     {/* div one */}
                     <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105">
-                        <Image 
+                        <Image
+                            alt="check ouir tailored service" 
                             className="mx-auto  object-cover  mb-3 md:mb-6"
                             src="/Scissors Vector (1).svg"
                             width={139}
@@ -23,6 +24,7 @@ export default function WhyChooseUs() {
                     {/* div two */}
                     <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105 ">
                         <Image 
+                            alt="get service from local people"
                             className="mx-auto object-cover mb-3 md:mb-3"
                             src="/Vector Local.svg"
                             width={139}
@@ -36,6 +38,7 @@ export default function WhyChooseUs() {
                     {/* div three */}
                     <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105">
                         <Image
+                            alt="these are the reason why anybody should choose us"
                             className="mx-auto object-cover mb-3 md:mb-6" 
                             src="/Vector Results.svg"
                             width={139}

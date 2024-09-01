@@ -7,6 +7,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row gap-y-3 justify-center md:justify-between">
                 <div className="md:w-1/3">
                     <Image 
+                        alt="jem media logo"
                         src="/JEM-Digital 1.png"
                         width={300}
                         height={300}
@@ -44,6 +45,7 @@ export default function Footer() {
                         <li>
                             <a href="" target="blank">
                                 <Image
+                                    alt="jem media instagram logo"
                                     src="/instagram-icon.svg"
                                     width="30"
                                     height="30"
@@ -54,6 +56,7 @@ export default function Footer() {
                         <li>
                             <a href="" target="blank">
                                 <Image
+                                    alt="jem media x/twitter logo"
                                     src="/x-icon.svg"
                                     width="30"
                                     height="30"

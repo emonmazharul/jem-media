@@ -15,6 +15,7 @@ export function Navbar(){
             <div className="text-white font-bold flex md:gap-20 justify-between md:justify-evenly">
                 <Link href="/">
                     <Image
+                        alt="jem-media homepage"
                         src="/logo.png"
                         width="100"
                         height="80" 
@@ -40,6 +41,7 @@ export function Navbar(){
                     className="md:hidden"
                 >
                     <Image 
+                        alt="click here to see mobile menu"
                         src="/hamburger.svg"
                         width={25}
                         height={25}

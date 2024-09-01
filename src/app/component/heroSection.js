@@ -19,7 +19,8 @@ export function HeroSection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 mt-3 md:mt-0 mb-16 bg-no-repeat bg-center bg-cover " >
-                    <Image 
+                    <Image
+                        alt="We are offering variety of digital services. Check out and unlock" 
                         className="object-cover md:mx-auto"
                         src={"/heroimage.svg"}
                         width={500}
