@@ -24,7 +24,7 @@ export async function POST(req) {
             }
         }
       
-        const doc_ref = await addDoc(message_collection, {
+        await addDoc(message_collection, {
             interest:body.interest,
             business_name:body.business_name,
             name:body.name,
@@ -32,7 +32,6 @@ export async function POST(req) {
             phone:body.phone,
             message_text:body.message_text,
         });
-        console.log(doc_ref.id);
         return Response.json({message:'Succesfully send your message. We will reach to you soon.'}, {status:200})
     } catch(e) {   
         console.log(e.message);

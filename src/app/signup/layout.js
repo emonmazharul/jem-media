@@ -1,6 +1,6 @@
 
 export const metadata = {
-    title:'Customer form'
+    title:'jem-media customer query form'
 }
 
 export default function ProfileLayout({children}) {

@@ -44,9 +44,9 @@ export default function SignupPage() {
                     <br/>
                     <br/>
                     <label className="text-[14px] md:text-[20px] md:mb-7">
-                        e.g. <strong>“Scaffolding"</strong> - Our expert team of scaffolders will be on site to complete 
+                        e.g. <strong> &quot;Scaffolding</strong> - Our expert team of scaffolders will be on site to complete 
                         jobs with industry leading equipment. We are on hand to assist with any 
-                        extra help that will speed up your home rennovation.”
+                        extra help that will speed up your home rennovation.&quot;
                     </label>
                     <MyInput input_name="input_bonus_feature" classNames="mt-8 md:mt-16 w-full" input_placeholder="start typing " />
                     {/* <input  type="text" className="md:mt-5 w-full bg-none" ></input> */}
@@ -132,6 +132,7 @@ export default function SignupPage() {
                 <button type="submit" className="bg-colorTwo px-8 md:px-16 py-4 rounded-[16px] md:text-[20px]">
                     <Image
                         className="inline mr-2"
+                        alt="submit your form"
                         src="plane-icon.svg"
                         width={20}
                         height={20}

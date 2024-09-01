@@ -51,6 +51,7 @@ export function ContactSection() {
             setFormLoading(false);
             setError('');
             setSuccess(data.message);
+            setInterest('');
             e.target.reset();
         } catch (e) {
             setFormLoading(false)
@@ -122,7 +123,14 @@ export function ContactSection() {
                                 <div className="mb-4 md:mb-6 md:pl-0">
                                     {
                                         ['Website', 'Branding', 'Social Media', 'Advertising', 'Content'].map(item => {
-                                            return <button onClick={() => {setting_interest(item)}} name="interest" type="button" value={item} className="py-2 px-4 mb-4 mr-4 md:mr-4 md:mb-4 md:px-4 md:py-2 border border-colorTwo text-white rounded-[8px] hover:bg-colorTwo active:bg-colorTwo" key={item}>
+                                            return <button 
+                                                onClick={() => {setting_interest(item)}} 
+                                                name="interest" 
+                                                type="button" 
+                                                value={item}
+                                                className={`py-2 px-4 mb-4 mr-4 md:mr-4 md:mb-4 md:px-4 md:py-2 border border-colorTwo text-white rounded-[8px] hover:bg-colorTwo ${interest == item ? 'bg-colorTwo' : ''} `} 
+                                                key={item}
+                                            >
                                                 {item}
                                             </button>
                                         })
@@ -150,6 +158,13 @@ export function ContactSection() {
 
                                 <div required className="mt-10 w-full">
                                     <button className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px]">
+                                        <Image
+                                            className="inline mr-2"
+                                            alt="submit message"
+                                            src="plane-icon.svg"
+                                            width={20}
+                                            height={20}
+                                        />
                                         {form_loading ? 'Sending' : 'Send message'}
                                     </button>
                                 </div>
@@ -163,25 +178,29 @@ export function ContactSection() {
 }
 
 export function FormErrorMessage() {
-    return <div className="flex gap-x-3 bg-red-200 text-colorOne w-full md:px-4 md:py-2" >
+    return <div className="flex gap-x-3 bg-red-200 text-colorOne w-full px-4 py-2 text-[14px] md:text-[20px]" >
         <Image 
             alt="sorry could not submit your form. please check the info and try again."
             width={20}
             height={20}
             src="/x-mark.svg"
         />
-        please fill in all the fields
+        <span>
+            Please fill in all the fields
+        </span>
     </div> 
 }
 
 export function FormSuccessMessage() {
-    return <div className="flex gap-x-3 bg-green-200 text-colorOne w-full md:px-4 md:py-2" >
+    return <div className="flex gap-x-3 bg-green-200 text-colorOne w-full px-4 py-2 text-[14px] md:text-[20px]" >
         <Image 
             alt="successfully send your message"
             width={20}
             height={20}
             src="/check-solid.svg"
         />
-        Succesfully send your messages
+        <span>
+            Succesfully send your messages
+        </span>
     </div>
 }
