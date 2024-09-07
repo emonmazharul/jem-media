@@ -20,7 +20,7 @@ export default function Accordion({children,title,id,active}) {
           aria-controls={`accordion-text-01`}
         >
           <span>{title}</span>
-          <svg className="fill-indigo-500 shrink-0 ml-8 absolute right-3 top-[50%] translate-y-[-50%] " width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <svg  className="fill-indigo-500 shrink-0 ml-8 absolute right-3 top-[50%] translate-y-[-50%] " width="16" height="16" xmlns="http://www.w3.org/2000/svg">
             <rect y="7" width="16" height="2" rx="1" className={`ttransform origin-center transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
             <rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
           </svg>           

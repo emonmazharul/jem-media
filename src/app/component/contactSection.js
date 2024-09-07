@@ -139,7 +139,7 @@ export function ContactSection() {
                                         type="text"
                                         onChange={(e) => setInterest(e.target.value.trim())}
                                         className="bg-colorOne py-2 px-4 mb-4 mr-4 md:mr-4 md:mb-4 md:px-4 md:py-2 border border-colorTwo text-white rounded-[8px] focus:outline-none"
-                                        placeholder="Other (Pleae Specify)"
+                                        placeholder="Other (Please Specify)"
 
                                     />
                                 </div>
