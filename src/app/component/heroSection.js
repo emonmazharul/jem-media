@@ -1,6 +1,6 @@
 import Image from "next/image"
 export function HeroSection() {
-    return <main className="md:mb-16">
+    return <main className="md:mb-22">
         <div className="container md:mx-auto md:w-[1200px]">
             <div className="flex flex-col md:flex-row align-middle">
                 <div className="md:w-1/2 md:pt-20 ">

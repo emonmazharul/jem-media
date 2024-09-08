@@ -72,7 +72,7 @@ export function ContactSection() {
     }, [error,success])
 
     return <>
-        <section id="contact" className="md:py-20 mb-14 md:mb-0">
+        <section id="contact" className="md:py-20  mb-14 md:mb-20">
             <div className="container md:w-[1200px] md:mx-auto ">
                 <div className="flex flex-col md:flex-row justify-center md:justify-between">
                     <div className="md:w-[50%]">

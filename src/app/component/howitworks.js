@@ -30,7 +30,7 @@ export function MyImage({src}){
 }
 
 export default function  HowitWorks(){
-    return <section className="mt-10 md:mt-0">
+    return <section className="mt-10 mb-0 md:mb-10">
         <div className="container md:mx-auto md:w-[1200px] mb-10 md:mb-0 md:py-20">
             <div className="text-center mb-10 md:mb-20">
                 <h1 className=" text-2xl md:text-5xl md:mb-4 font-extrabold">How It Works</h1>

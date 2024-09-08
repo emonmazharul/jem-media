@@ -1,6 +1,6 @@
 export function Services(){
     return <>
-        <section id="services" className="service_section mb-10 md:mb-0  md:py-20">
+        <section id="services" className="service_section mb-10 md:mb-10  md:py-20">
             <h1 className="text-3xl md:text-5xl mb-10 md:mb-20 text-black font-extrabold text-center">
                 Services
             </h1>
