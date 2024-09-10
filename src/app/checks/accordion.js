@@ -1,10 +1,8 @@
-
 import React, { useState,useRef,useEffect } from 'react';
-// import { ChevronDownIcon } from '@heroicons/react/solid';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 
-const AccordionItem = ({ title, content }) => {
+export const AccordionItem = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
     const [height, setHeight] = useState(0);

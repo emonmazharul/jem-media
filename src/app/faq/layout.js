@@ -3,9 +3,8 @@ export const metadata = {
     title:'FAQ'
 }
 
-export default function ProfileLayout({children}) {
+export default function FaqLayout({children}) {
     return <div>
         {children}
-        
     </div>
 }

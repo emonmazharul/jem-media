@@ -2,7 +2,7 @@ import Image from "next/image";
 
 
 export function Card({heading,text}) {
-    return <div className="work_card text-center px-4 py-4 md:px-5 md:py-5">
+    return <div className="work_card text-center px-4 py-4 md:px-5 md:py-5 transition-all hover:scale-105 delay-75 ease-in-out">
         <h1 className="font-semibold text-[20px] md:text-4xl md:mb-6">{heading}</h1>
         <p className="md:text-2xl  text-[12px]">
             {text}
@@ -14,14 +14,14 @@ export function MyImage({src}){
     return <>
         <Image
             alt="View our work plan and get start quickly"
-            className="hidden md:block order-2 md:order-1"
+            className="hidden md:block order-2 md:order-1 transition-all hover:scale-105 delay-75 ease-in-out"
             src={src}
             width={317}
             height={317}
         />
         <Image
             alt="View our work plan and get start quickly"
-            className="md:hidden order-2 object-contain md:order-1"
+            className="md:hidden order-2 object-contain md:order-1 transition-all hover:scale-105 delay-75 ease-in-out"
             src={src}
             width={140}
             height={140}
@@ -30,7 +30,7 @@ export function MyImage({src}){
 }
 
 export default function  HowitWorks(){
-    return <section className="mt-10 mb-0 md:mb-10">
+    return <section id="howitworks" className="mt-20 md:mt-10 mb-0 md:mb-10">
         <div className="container md:mx-auto md:w-[1200px] mb-10 md:mb-0 md:py-20">
             <div className="text-center mb-10 md:mb-20">
                 <h1 className=" text-2xl md:text-5xl md:mb-4 font-extrabold">How It Works</h1>
