@@ -8,7 +8,7 @@ export default function WhyChooseUs() {
             <div className="contanier  md:mx-auto md:w-[1200px]">
                 <div className="flex flex-col md:flex-row gap-y-14 md:gap-y-0 md:gap-10 md:justify-center text-center px-3 md:px-0">
                     {/* div one */}
-                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105">
+                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all duration-300 ease-in hover:scale-105">
                         <Image
                             alt="check ouir tailored service" 
                             className="mx-auto  object-cover  mb-3 md:mb-6"
@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
                         </p>
                     </div>
                     {/* div two */}
-                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105 ">
+                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all duration-300 ease-in hover:scale-105 ">
                         <Image 
                             alt="get service from local people"
                             className="mx-auto object-cover mb-3 md:mb-3"
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                         </p>
                     </div>
                     {/* div three */}
-                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all ease-in hover:scale-105">
+                    <div className="md:w-[30%] md:py-7 md:px-7 md:rounded-[40px] choose_us_card transition-all duration-300 ease-in hover:scale-105">
                         <Image
                             alt="these are the reason why anybody should choose us"
                             className="mx-auto object-cover mb-3 md:mb-6" 

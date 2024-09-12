@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+body {
+  scroll-behavior: smooth;
+}
 
 .footer_copyright {
   background-color: rgba(84, 101, 189, 0.16);

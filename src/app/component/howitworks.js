@@ -2,7 +2,7 @@ import Image from "next/image";
 
 
 export function Card({heading,text}) {
-    return <div className="work_card text-center px-4 py-4 md:px-5 md:py-5 transition-all hover:scale-105 delay-75 ease-in-out">
+    return <div className="work_card text-center px-4 py-4 md:px-5 md:py-5 transition-all duration-300 hover:scale-105 delay-75 ease-in-out">
         <h1 className="font-semibold text-[20px] md:text-4xl md:mb-6">{heading}</h1>
         <p className="md:text-2xl  text-[12px]">
             {text}
@@ -14,14 +14,14 @@ export function MyImage({src}){
     return <>
         <Image
             alt="View our work plan and get start quickly"
-            className="hidden md:block order-2 md:order-1 transition-all hover:scale-105 delay-75 ease-in-out"
+            className="hidden md:block order-2 md:order-1 transition-all duration-300 hover:scale-105 delay-75 ease-in-out"
             src={src}
             width={317}
             height={317}
         />
         <Image
             alt="View our work plan and get start quickly"
-            className="md:hidden order-2 object-contain md:order-1 transition-all hover:scale-105 delay-75 ease-in-out"
+            className="md:hidden order-2 object-contain md:order-1 transition-all duration-300 hover:scale-105 delay-75 ease-in-out"
             src={src}
             width={140}
             height={140}

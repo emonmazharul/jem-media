@@ -17,14 +17,21 @@ export function HeroSection() {
                         <p className="mb-6 md:mb-20  text-black text-center md:text-left  text-[14px] md:text-[18px]">
                             Our team handle the marketing, you focus on your passion
                         </p>
-                        <Link href="https://calendly.com/jem-digital-info/15min?preview_source=et_card&month=2024-09"  target="blank" className="bg-colorTwo text-colorOne font-extrabold px-4 py-2 md:px-8 md:py-4 md:text-[30px] rounded-full">Unlock</Link>
+                        <Link 
+                            href="https://calendly.com/jem-digital-info/15min?preview_source=et_card&month=2024-09"  
+                            target="blank" 
+                            className="flex flex-col bg-colorTwo py-2 md:py-3 md:max-w-[80%] rounded-full shadow-md transition-all duration-100 ease-out hover:bg-white hover:border-2 hover:border-black"
+                        >
+                            <span className="text-[18px] md:text-[30px] text-center font-extrabold">Speak To Our Team Today</span>
+                            <span className="text-[12px] md:text-[20px] text-center">Schedule a call to discuss your needs</span>
+                        </Link>
                     </div>
                 </div>
                 <div className="md:w-1/2 mt-4 md:mt-0 md:pt-20 mb-20 md:mb-16 bg-no-repeat bg-center bg-cover " >
                     <Image
                         alt="We are offering variety of digital services. Check out and unlock" 
-                        className="object-cover md:mx-auto"
-                        src={"/heroimage.svg"}
+                        className="object-cover md:mx-auto transition-all duration-500 ease-in-out md:hover:scale-110"
+                        src="/1.1.png"
                         width={600}
                         height={600}
                     />

@@ -136,8 +136,8 @@ export function ContactSection() {
                                 <div className="mb-4 md:mb-6 md:pl-0">
                                     {
                                         ['Website', 'Branding', 'Social Media', 'Advertising', 'Content'].map(item => {
-                                            item = item.toLowerCase()
-                                            return <InterestButton setting_interest={setting_interest} item={item} btnClassName={interest.includes(item) ? 'bg-colorTwo': ''} key={item} />
+                                            // item = item.toLowerCase()
+                                            return <InterestButton setting_interest={() => setting_interest(item)} item={item} btnClassName={interest.includes(item.toLowerCase()) ? 'bg-colorTwo': ''} key={item} />
                                         })
                                     }
                                     <input
@@ -165,7 +165,7 @@ export function ContactSection() {
                                 }
 
                                 <div required className="mt-10 w-full">
-                                    <button className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px]">
+                                    <button className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px] font-bold transition-all  ease-in duration-150 hover:bg-white hover:text-black hover:border-3 hover:border-black">
                                         <Image
                                             className="inline mr-2"
                                             alt="submit message"

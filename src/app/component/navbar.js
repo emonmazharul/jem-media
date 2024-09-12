@@ -1,16 +1,17 @@
 'use client'
 import { redirect } from "next/dist/server/api-utils";
+import { usePathname } from "next/navigation";
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useRef } from "react"
 
 export function Navbar(){
+    const pathName = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const mobile_menu_ref = useRef(null);
 
     const toggleMenu = () => {
         const element_height = `h-[300px]`
-        // console.log(eleme)
         setIsMenuOpen(!isMenuOpen);
         if (mobile_menu_ref.current.classList.contains(element_height)) {
             mobile_menu_ref.current.classList.remove(element_height);
@@ -19,30 +20,40 @@ export function Navbar(){
         }
     };
 
+    const menuClickACtion = () => {
+        const element_height = `h-[300px]`
+        setIsMenuOpen(false);
+        mobile_menu_ref.current.classList.remove(element_height);
+    }
+
     return (
-        <nav className="bg-colorOne relative px-6 py-4 md:px-20 md:py-6">
+        <nav className="bg-colorOne relative px-6 py-4 md:px-20 md:py-2">
             <div className="text-white font-bold flex md:gap-20 justify-between md:justify-evenly items-start">
                 <Link href="/">
                     <Image
+                        onClick={menuClickACtion}
                         alt="jem-media homepage"
-                        src="/logo.png"
+                        src="/JEM-Digital.png"
                         width="100"
                         height="100" 
                         className="md:hidden ease-in-out transition-all hover:scale-105"
                     />
                     <Image
                         alt="jem-media homepage"
-                        src="/logo.png"
-                        width="160"
-                        height="120" 
+                        src="/JEM-Digital.png"
+                        width="140"
+                        height="100" 
                         className="hidden md:block ease-in-out object-cover transition-all hover:scale-105"
                     />
                 </Link>
-                <Link href="#service" className="hidden md:inline md:pt-3">Services</Link>
-                <Link href="#whychooseus" className="hidden md:inline md:pt-3">Why Choose Us</Link>
-                <Link href="/faq" className="hidden md:inline md:pt-3">FAQ</Link>
-                <Link href="https://calendly.com/jem-digital-info/15min?preview_source=et_card&month=2024-09" target="blank" className="hidden md:inline bg-colorTwo md:px-8 rounded-full md:pb-3 md:pt-3">
-                    Unlock
+                <Link href="/#services" className="hidden  md:inline md:mt-2 md:pt-3">Services</Link>
+                <Link href="/#whychooseus" className="hidden md:inline md:mt-2 md:pt-3">Why Choose Us</Link>
+                <Link href="/faq" className="hidden md:inline md:mt-2 md:pt-3">FAQ</Link>
+                <Link href="#contact" 
+                    target="blank" 
+                    className="hidden md:inline bg-colorTwo text-colorOne md:mt-2 md:px-8 rounded-full md:pb-3 md:pt-3 box-border border-2 border-colorTwo transition-all ease-linear duration-150 delay-100 hover:bg-white hover:border-2 hover:border-black"
+                >
+                    Contact Us
                 </Link>
                 
                 {/* Animated Hamburger Button */}
@@ -69,19 +80,39 @@ export function Navbar(){
                 </button>
             </div>
             <div id="mobile_menu" ref={mobile_menu_ref} className="md:hidden bg-colorOne mt-3 absolute z-20 w-full left-0 mobile_nav_menu h-0 overflow-hidden transition-[height] delay-100 ease-linear">
-                <Link className="block text-white border-t-2 border-b-2 text-[17px] px-4 py-4" href="#services">Services</Link>
-                <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="#whychooseus">Why Choose Us</Link>
-                <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="#howitworks">
+                <Link 
+                    className="block text-white border-t-2 border-b-2 text-[17px] px-4 py-4" 
+                    href="/#services"
+                    onClick={menuClickACtion}
+                >
+                    Services
+                </Link>
+                <Link 
+                    className="block text-white  border-b-2 text-[17px] px-4 py-4" 
+                    href="/#whychooseus"
+                    onClick={menuClickACtion}
+                >
+                    Why Choose Us
+                </Link>
+                <Link 
+                    className="block text-white  border-b-2 text-[17px] px-4 py-4" 
+                    href="/#howitworks"
+                    onClick={menuClickACtion}
+                >
                     How It Works
                 </Link>
-                <Link className="block text-white  border-b-2 text-[17px] px-4 py-4" href="#contact">
+                <Link 
+                    className="block text-white  border-b-2 text-[17px] px-4 py-4" 
+                    href="/#contact"
+                    onClick={menuClickACtion}
+                >
                     Contact Us
                 </Link>
                 <Link 
                     className="block text-white border-b-2 text-[17px] px-4 py-4"
                     href="/faq"
                     onClick={(e) => {
-                        mobile_menu_ref.current.classList.add('hidden');
+                        menuClickACtion();
                         redirect('/faq')
                     }}
                 >
