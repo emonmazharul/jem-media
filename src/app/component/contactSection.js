@@ -1,29 +1,13 @@
 'use client'
 import Image from "next/image"
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback ,useRef } from "react";
+import { InterestButton } from "./interestButton";
 
-const set_interests = ['website', 'branding', 'social-media', 'advertising', 'content'];
-
-const InterestButton = ({setting_interest,item,btnClassName}) => {
-  
-    return <button 
-        onClick={(e) => {
-            setting_interest(item)
-        }} 
-        name="interest" 
-        type="button" 
-        value={item.toLowerCase()}
-        className={`py-2 px-4 mb-4 mr-4 md:mr-4 md:mb-4 md:px-4 md:py-2 border border-colorTwo text-white rounded-[8px] hover:bg-colorTwo ${btnClassName}`} 
-        key={item}
-    >
-        {item}
-    </button>
-}
-
+export default InterestButton;
 
 
 export function ContactSection() {
-    const [interest,setInterest] = useState([]);
+    const [interest,setInterest] = useState('');
     const [custom_interest, setCustomInterest] = useState('');
     
     const [form_loading,setFormLoading] = useState(false);
@@ -32,15 +16,14 @@ export function ContactSection() {
     const [error,setError] = useState('');
 
     const setting_interest = (new_interest) => {
-        new_interest = new_interest.trim().toLowerCase();
-        const isValueExist = interest.find(item => item == new_interest);
-        if(isValueExist) {
-            setInterest(interest.filter((val) => val !== isValueExist ));
+        if (interest.includes(new_interest)) {
+            let modified_interest = interest.replace(new_interest, '');
+            setInterest(modified_interest);
             return;
         }
-        setInterest(interest.concat(new_interest))
-
+        setInterest(interest.trim() + ' ' + new_interest );
     }
+
 
     const form_handler = async (e) => {
         e.preventDefault();
@@ -70,7 +53,7 @@ export function ContactSection() {
                 method: 'POST',
                 body: JSON.stringify(
                     {
-                        interest:interest.join(' and ') + ' and ' + custom_interest.trim() ,
+                        interest: interest + '  and' + custom_interest ,
                         ...all_inputs
                     }
                 )
@@ -79,7 +62,7 @@ export function ContactSection() {
             setFormLoading(false);
             setError('');
             setSuccess(data.message);
-            setInterest([]);
+            setInterest('');
             setCustomInterest('');
             e.target.reset();
         } catch (e) {
@@ -123,9 +106,10 @@ export function ContactSection() {
                     <div className="bg-colorOne mx-5 py-5 md:mx-0 md:w-[40%] md:p-5 rounded-[24px]">
                         <h6 className="text-white md:text-[20px] font-medium mb-2 md:mb-4 pl-4 md:pl-0">
                             {/* I’m interested in {interest ? ( interest.length < 20 ? interest : interest.slice(0,20) + ' ...' ) : '...'} */}
-                            I am interested in {
+                            {/* I am interested in {
                                 interest.map((val,index) => <span className="inline-block mr-2" key={index}>{val}</span>)
-                            }
+                            } */}
+                            I am interested in {interest.trim()}
                             {custom_interest ? <span className="inline-block">{custom_interest}</span>:null}
                         </h6>
                         <div>
@@ -134,12 +118,19 @@ export function ContactSection() {
                                 className="flex flex-wrap gap-x-4 gap-y-8 px-4 md:px-0 md:justify-between"
                             >
                                 <div className="mb-4 md:mb-6 md:pl-0">
-                                    {
-                                        ['Website', 'Branding', 'Social Media', 'Advertising', 'Content'].map(item => {
-                                            // item = item.toLowerCase()
-                                            return <InterestButton setting_interest={() => setting_interest(item)} item={item} btnClassName={interest.includes(item.toLowerCase()) ? 'bg-colorTwo': ''} key={item} />
+                                    {/* {
+                                        ['WebWebsite   key={item} 
+                                            />
                                         })
-                                    }
+                                    } */}
+                                    {['Website', 'Branding', 'Social Media', 'Advertising', 'Content'].map(item => (
+                                        <InterestButton 
+                                            key={item}
+                                            interest={interest}
+                                            setting_interest={setting_interest} 
+                                            item={item} 
+                                        />
+                                    ))}
                                     <input
                                         type="text"
                                         value={custom_interest}
