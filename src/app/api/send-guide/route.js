@@ -1,8 +1,8 @@
 import { Resend } from 'resend';
-import * as Mailchipp from '@mailchimp/mailchimp_transactional'
+// import * as Mailchipp from '@mailchimp/mailchimp_transactional'
 import EmailTemplate from '@/app/component/emailTemplate';
 
-const mailchimp =  Mailchipp(process.env.mailchimp_api_key);
+
 const resend = new Resend(process.env.resend_api_key);
 
 export function GET() {
