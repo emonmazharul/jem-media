@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
 }
 body {
   scroll-behavior: smooth;
@@ -16,10 +17,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.footer_copyright {
+/* .footer_copyright {
   background-color: rgba(84, 101, 189, 0.16);
   color: white;
-}
+} */
 
 .service_card {
   background-color: rgba(84, 101, 189, 0.08);

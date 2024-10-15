@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Events Calendar//iCal4j 1.0//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTAMP:20240911T124949Z
+DTSTART:20240917T090000Z
+DTEND:20240917T093000Z
+SUMMARY:Home Instead - Interview Confirmation @ Sep 17\, 2024\, 10:00:00 
+ AM - 10:30:00 AM (GMT+1)
+UID:5b5a3475-122c-4ac5-ad2b-1e120b393de8
+LOCATION:Allen House Business Centre\, The Maltings\, Station Road\, Sawb
+ ridgeworth CM21 9JX
+ORGANIZER;ROLE=NON-PARTICIPANT;CN=sarah godsmark:mailto:1d95816d-f66b-419
+ c-b586-2c56b85d7c0e@eu.calendar.smartrecruiters.com
+ATTENDEE;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;ROLE=REQ-PARTICIPANT;CN=Mazharul
+  Islam:mailto:mazharuli1999@gmail.com
+SEQUENCE:0
+CLASS:PUBLIC
+DESCRIPTION:Scheduled interview between Home Instead and Mazharul Islam\,
+  candidate for Recruitment Care Professional Form_EastHerts_T007\n\n10:0
+ 0 AM - 10:30 AM (Greenwich Mean Time : Dublin\, Edinburgh\, Lisbon\, Lon
+ don) sarah godsmark\, Sarah Golder\n\n\n\n
+END:VEVENT
+END:VCALENDAR

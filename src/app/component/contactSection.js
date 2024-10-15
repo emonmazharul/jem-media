@@ -9,7 +9,7 @@ export default InterestButton;
 export function ContactSection() {
     const [interest,setInterest] = useState('');
     const [custom_interest, setCustomInterest] = useState('');
-    
+    const [svgFillColor, setSvgFillColor] = useState('white');
     const [form_loading,setFormLoading] = useState(false);
     // this success means the form state of form success
     const [success,setSuccess] = useState('');
@@ -156,14 +156,17 @@ export function ContactSection() {
                                 }
 
                                 <div required className="mt-10 w-full">
-                                    <button className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px] font-bold transition-all  ease-in duration-150 hover:bg-white hover:text-black hover:border-3 hover:border-black">
-                                        <Image
-                                            className="inline mr-2"
-                                            alt="submit message"
-                                            src="plane-icon.svg"
-                                            width={20}
-                                            height={20}
-                                        />
+                                    <button 
+                                        className="bg-colorTwo text-white py-3 md:py-3 md:px-5 w-[100%] md:w-auto rounded-[16px] font-bold transition-all  ease-in duration-150 hover:bg-white hover:text-black hover:border-3 hover:border-black"
+                                        onMouseEnter={() => { 
+                                           setSvgFillColor('black');
+                                        }}
+                                        onMouseLeave={() => { 
+                                            setSvgFillColor('white');
+
+                                        }}
+                                    >
+                                        <svg className="inline w-5 h-5 mr-2 transition-all" xmlns="http://www.w3.org/2000/svg" fill={svgFillColor} viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
                                         {form_loading ? 'Sending' : 'Send message'}
                                     </button>
                                 </div>
@@ -176,7 +179,7 @@ export function ContactSection() {
     </>
 }
 
-export function FormErrorMessage() {
+export function FormErrorMessage({error}) {
     return <div className="flex gap-x-3 bg-red-200 text-colorOne w-full px-4 py-2 text-[14px] md:text-[20px]" >
         <Image 
             alt="sorry could not submit your form. please check the info and try again."
@@ -185,12 +188,12 @@ export function FormErrorMessage() {
             src="/x-mark.svg"
         />
         <span>
-            Please fill in all the fields
+            {error || 'Please fill in all the fields'}
         </span>
     </div> 
 }
 
-export function FormSuccessMessage() {
+export function FormSuccessMessage({message}) {
     return <div className="flex gap-x-3 bg-green-200 text-colorOne w-full px-4 py-2 text-[14px] md:text-[20px]" >
         <Image 
             alt="successfully send your message"
@@ -199,7 +202,7 @@ export function FormSuccessMessage() {
             src="/check-solid.svg"
         />
         <span>
-            Succesfully send your messages
+           { message || 'Succesfully send your messages' } 
         </span>
     </div>
 }

@@ -51,7 +51,7 @@ export function Navbar(){
                 <Link href="/faq" className="hidden md:inline md:mt-2 md:pt-3">FAQ</Link>
                 <Link href="#contact" 
                     target="blank" 
-                    className="hidden md:inline bg-colorTwo text-colorOne md:mt-2 md:px-8 rounded-full md:pb-3 md:pt-3 box-border border-2 border-colorTwo transition-all ease-linear duration-150 delay-100 hover:bg-white hover:border-2 hover:border-black"
+                    className="hidden md:inline bg-colorTwo text-colorOne md:mt-2 md:px-8 rounded-[12px] md:pb-3 md:pt-3 box-border border-2 border-colorTwo transition-all ease-linear duration-150 delay-100 hover:bg-white hover:border-2 hover:border-black"
                 >
                     Contact Us
                 </Link>

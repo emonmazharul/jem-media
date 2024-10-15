@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 // import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import {getFirestore,collection} from 'firebase/firestore'
+import {getFirestore,collection,doc,query,where,getDocs} from 'firebase/firestore'
 
 
 // Your web app's Firebase configuration
@@ -23,3 +23,17 @@ const app = initializeApp(firebaseConfig);
 // export const firbase_auth_user = await signInWithEmailAndPassword(auth, 'dev.mazharul@gmail.com', 'hellow emon how are you');
 export const db = getFirestore(app);
 export const message_collection = collection(db,'messages');
+export const newsLetterCollection = collection(db,'newsLetterEmail');
+
+export async function checkClientEmail(clientEmail) {
+  try {
+    const q = query(newsLetterCollection, where('clientEmail', '==', clientEmail));
+    const querySnapShot = await getDocs(q);
+    if(!querySnapShot.empty) return true;
+    return false;
+  }
+  catch (e) {
+    console.log(e);
+    return false;
+  }
+  }
