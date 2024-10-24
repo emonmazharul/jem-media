@@ -3,7 +3,6 @@ import Image from "next/image"
 import { useState, useEffect, useCallback ,useRef } from "react";
 import { InterestButton } from "./interestButton";
 
-export default InterestButton;
 
 
 export function ContactSection() {

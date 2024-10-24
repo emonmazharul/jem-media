@@ -20,7 +20,7 @@ export function HeroSection() {
                         <Link 
                             href="https://calendly.com/jem-digital-info/15min?preview_source=et_card&month=2024-09"  
                             target="blank" 
-                            className="flex flex-col bg-colorTwo py-2 md:py-3 md:max-w-[80%] rounded-[25px] shadow-md transition-all duration-100 ease-out hover:bg-white hover:border-2 hover:border-black"
+                            className="flex box-border flex-col bg-colorTwo py-2 md:py-3 md:max-w-[90%] rounded-[25px] shadow-md transition-all duration-100 ease-out hover:bg-white hover:border-2 hover:border-black"
                         >
                             <span className="text-[18px] md:text-[30px] text-center font-extrabold">Speak To Our Team Today</span>
                             <span className="text-[12px] md:text-[20px] text-center">Schedule a call to discuss your needs</span>
