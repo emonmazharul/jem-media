@@ -60,7 +60,7 @@ export function PagePopUp() {
           <h2 className="mb-10 text-[21px] md:text-[28px] uppercase text-center font-extrabold">
             <span className="text-black">get your business a  </span>
             <br/>
-            <span className="text-colorTwo">free marketting guide</span>
+            <span className="text-colorTwo">free marketing guide</span>
           </h2>
           <p className="mb-5 md:mb-10 text-[14px] md:text-[18px] text-center md:w-[95%] w-full">
             Enter your email address below to recieve a free marketing e-book worth £100s! 
